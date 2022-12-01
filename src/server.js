@@ -14,9 +14,9 @@ const { PORT } = process.env;
 console.log(process.env);
 
 const app = express();
-app.engine('jsx', customRender);
+app.engine('js', customRender);
 app.set('views', path.join(__dirname, 'components'));
-app.set('view engine', 'jsx');
+app.set('view engine', 'js');
 
 app.use(express.static('public'));
 app.use(morgan('dev'));
